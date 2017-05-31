@@ -30,10 +30,10 @@ endfunction
 function Action transit_next_state(MetadataT metadata);
     action
     let vec = nextDeparseState(metadata);
-    if (vec == 0) begin
-        w_deparse_header_done.send();
-    end
-    else begin
+    // if (vec == 0) begin
+    //    w_deparse_header_done.send();
+    // end
+    // else begin
         Bit#(2) nextHeader = truncate(pack(countZerosLSB(vec)% 3));
         DeparserState nextState = unpack(nextHeader);
         case (nextState) matches
@@ -41,7 +41,7 @@ function Action transit_next_state(MetadataT metadata);
             StateDeparseIpv4: w_ipv4.send();
             default: $display("ERROR: unknown states.");
         endcase
-    end
+    //end
     endaction
 endfunction
 function MetadataT update_metadata(DeparserState state);

@@ -1,0 +1,1 @@
+method forward_tbl_add_entry=ingress.forward_tbl_add_entry;

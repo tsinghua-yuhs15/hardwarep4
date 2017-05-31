@@ -26,8 +26,10 @@ function Ipv4T extract_ipv4_t(Bit#(160) data);
     return unpack(byteSwap(data));
 endfunction
 typedef struct {
-   Maybe#(void) ipv4;
-   Maybe#(void) ethernet;
+// MOD
+   Maybe#(Header#(Ipv4T)) ipv4;
+   Maybe#(Header#(EthernetT)) ethernet;
+//-----------------
 } Headers deriving (Bits, Eq, FShow);
 instance DefaultValue#(Headers);
    defaultValue = unpack(0);

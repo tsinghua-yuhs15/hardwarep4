@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed May 31 23:18:01 2017
+# Process ID: 18446
+# Current directory: /home/netarchlab/p4fpga/p4fpga/examples/simple_router/kc705
+# Command line: vivado -notrace -mode batch -source /home/netarchlab/p4fpga/connectal/scripts/connectal-synth-pcie.tcl
+# Log file: /home/netarchlab/p4fpga/p4fpga/examples/simple_router/kc705/vivado.log
+# Journal file: /home/netarchlab/p4fpga/p4fpga/examples/simple_router/kc705/vivado.jou
+#-----------------------------------------------------------
+source /home/netarchlab/p4fpga/connectal/scripts/connectal-synth-pcie.tcl -notrace

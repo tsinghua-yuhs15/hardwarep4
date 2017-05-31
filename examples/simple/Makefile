@@ -42,7 +42,7 @@ BURST_LEN_SIZE=12
 # P4FPGA
 ###########################################
 
-P4FILE=Simple.p4
+P4FILE=../simple_router/p4src/virtualp4/vp4.p4
 CONNECTALFLAGS += -D PARSER=Parser
 CONNECTALFLAGS += -D DEPARSER=Deparser
 CONNECTALFLAGS += -D MATCHTABLE=MatchTableSim
