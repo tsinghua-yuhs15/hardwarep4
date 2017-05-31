@@ -1,0 +1,33 @@
+/* -*-C++-*- */
+/*
+  This file contains IR related to bluespec backend.
+*/
+
+namespace BSV {
+
+class Rule : Type {
+#nodbprint
+  const IR::Type* getP4Type() const override { return this; }
+}
+
+class Runtime : Type {
+#nodbprint
+  const IR::Type* getP4Type() const override { return this; }
+}
+
+class DeparseState : IR::Type_Header {
+	int width_bits;
+  cstring indexed_name;
+#nodbprint
+}
+
+class ParseStep : IR::Type_Header {
+	int width_bits;
+	NullOK Type_Name type;
+	NullOK ListExpression keys;
+	NullOK IndexedVector<IR::SelectCase> cases;
+	NullOK IndexedVector<IR::AssignmentStatement> statements;
+#nodbprint
+}
+
+} // namespace BSV
